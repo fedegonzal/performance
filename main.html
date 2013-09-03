@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html class="mobile-html" ng-app="myApp">
+	<head>
+		<title>Municipalidad de Ushuaia</title>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
+
+		<link rel="stylesheet" type="text/css" media="all" href="app/js/lib/angular/mobile-nav/mobile-nav.css" />
+
+		<!--
+		<script data-main="app/js/main" src="app/js/lib/require.js"></script>
+		-->
+		<link rel="stylesheet" type="text/css" media="all" href="app/css/app.css" />
+
+	    <script src="app/js/lib/angular/angular.js"></script>
+	    <script src="app/js/main.js"></script>
+	    <script src="app/js/lib/angular/mobile-nav/mobile-nav.js"></script>
+
+	</head>
+
+	<body class="mobile-body" ng-controller="MainCtrl">
+		<mobile-view></mobile-view>
+
+		<!-- este llamado hará que PhonegapBuild agregue automáticamente 
+		la versión del script que corresponda según la plataforma -->
+		<script src="phonegap.js"></script>
+
+		
+
+<!--
+    	<script type="text/javascript" src="http://192.168.0.104:8080/target/target-script-min.js#ushuaia-movil"></script>
+-->
+
+	</body>
+</html>

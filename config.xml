@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "ar.gob.ushuaia.movil"
+        version   = "0.0.9.14">
+
+    <name>Ushuaia</name>
+
+    <description>
+        Portal de servicios para dispositivos móviles, de la ciudad de Ushuaia, Tierra del Fuego, Argentina.
+    </description>
+
+    <author href="http://www.ushuaia.gob.ar/" email="federico.gonzalez@ushuaia.gob.ar">
+        Federico González Brizzio
+    </author>
+
+    <access origin="*" />
+    <content src="index.html" />
+
+    <preference name="phonegap-version" value="2.9.0" />
+
+    <!-- Define app icon for each platform. -->
+    <icon src="res/icon/icon.png" />
+    <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
+    <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
+    <icon src="res/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
+    <icon src="res/icon/android/icon-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
+
+    <icon src="res/icon/bb/icon.png" gap:platform="blackberry" />
+    <icon src="res/icon/bb/icon_hover.png" gap:platform="blackberry" gap:state="hover"/>
+
+    <!--
+    <icon src="res/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
+    <icon src="res/icon/ios/icon-72.png"            gap:platform="ios"        width="72" height="72" />
+    <icon src="res/icon/ios/icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
+    <icon src="res/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
+    -->
+
+
+    <plugins>
+        <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
+        <plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
+        <plugin name="Notification" value="org.apache.cordova.Notification"/>
+        <plugin name="Device" value="org.apache.cordova.Device" />
+        <plugin name="Contacts" value="org.apache.cordova.ContactManager" />
+    </plugins>
+
+
+    <!-- Disable all permissions -->
+    <preference name="permissions" value="none"/>
+
+    <!-- Enable individual permissions -->
+    <feature name="http://api.phonegap.com/1.0/contacts"/>
+    <feature name="http://api.phonegap.com/1.0/file"/>
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
+    <feature name="http://api.phonegap.com/1.0/notification"/>
+
+
+    <!-- Debugging Ppurposes -->
+    <feature name="debug-server" required="true">
+       <param name="domain" value="http://192.168.1.111:8080"/>
+       <param name="key" value="ushuaia-movil"/>
+    </feature>
+
+</widget>

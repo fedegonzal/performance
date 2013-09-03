@@ -1,0 +1,61 @@
+
+<div class="page" id="cuando-llega-parada">
+
+    <div class="header"><a ng-tap="$navigate.go('/', 'slide')" class="btn">Volver</a><h1>Cuándo llega el cole?</h1></div>
+
+    <div class="content">
+
+        <h1>Consultar por parada</h1>
+        <p>Aquí abajo podrás conocer cuánto falta para que llegue el colectivo a una parada. 
+          Todas las paradas tienen un número que las identifica, sólo debes escribir ese número y tocar "consultar"</p>
+
+        <form id="formconsulta" onsubmit="return formConsultarParada();">
+            <div class="input-append">
+                <input id="fieldparada" placeholder="Número de parada" name="fieldparada" type="number" required /> 
+                <a class="btn consultar-parada" href="#cuando-llega-info" onclick="return consultarParada();">Consultar</a>
+            </div>
+        </form>
+
+        <h2>Paradas favoritas</h2>
+
+        <div class="paradas-favoritas">
+        </div>
+
+
+        <!-- angular -->
+        <div>
+            <h2>Angular</h2>
+
+            <div ng-controller="paradasController">
+                <div class="input-append"> 
+                    <input id="paradafield" type="number" ng-model="parada"> 
+                    <a id="consultar" ng-click="consultar()" class="btn">Consultar</a>
+                </div>
+
+                <p><strong>Resultado:</strong> {{espera}}</p>        
+
+            </div>
+
+        </div>
+        <!-- angular -->
+
+
+
+    </div><!-- .content -->
+
+
+    <div class="modal">
+        <div class="modal-header">
+            <h3>Consultando servidor...</h3>
+        </div>
+        <div class="modal-body">
+            <p>Consultando servidor...</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn btn-close">Cerrar</a>
+        </div>
+    </div>
+    <div class="modal-backdrop"></div>
+
+
+</div><!-- .page -->
